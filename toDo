@@ -1,0 +1,4 @@
+#!/bin/bash
+cd # Insert full path to files here
+./Main.py $1
+exit
