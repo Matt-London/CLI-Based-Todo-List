@@ -2,7 +2,7 @@
 A basic command line todo list that can store tasks and repeat them back later.
 
 To use this program I first recommend placing the following files in a safe place in the same folder: Main.py, Item.py, save.task.
-After this you should note the path to the files mentioned above and insert the path within the file named toDo right before the pound symbol that reads "# Insert full path to files here". Finally place the file named toDo somewhere that your $PATH environment variable reaches to. This way you can launch the program anywhere in the filesystem.
+After this you should note the path to the files mentioned above and insert the path within the file named toDo right before the pound symbol that reads "# Insert full path to files here". Finally place the file named toDo somewhere that your $PATH environment variable reaches to and type "chmod +x toDo". This way you can launch the program anywhere in the filesystem.
 
 Note: I will be pushing an update within the coming week, it will include an installer that will make installation far easier.
 
