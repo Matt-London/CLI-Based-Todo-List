@@ -1,0 +1,32 @@
+#!/bin/bash
+echo "Give the path to where you would like the files\nNote: This will not be where you launch it from\nPlease give FULL path\nRun 'pwd' in the folder to find the full path\nThis program will make a folder for the programs enclosure:\n"
+read filePath
+echo "Give the full path to where you would like the launcher:\nNote:\nIf you put it somewhere where the \$PATH reaches, you can launch it anywhere\nLeave blank for /usr/bin"
+read toPut
+if [ -z $toPut ]
+then
+  toPut = "/usr/bin"
+fi
+
+echo "Are these correct? (Enter 1 for yes, 0 for no):\nPath to files: $filePath\nPath to launcher: $toPut"
+read confirm
+if [ $confirm != 1 ]
+then
+  echo "Info incorrect. Please relaunch installer"
+  exit
+fi
+
+chmod +x Main.py
+echo "#!/bin/bash\ncd $filePath/toDo\n./Main.py \$1\nexit" > toDo
+chmod +x toDo
+
+mkdir $filePath/toDo
+
+cp Item.py $filePath/toDo
+cp Main.py $filePath/toDo
+cp LICENSE $filePath/toDo
+cp README.md $filePath/toDo
+cp save.task $filePath/toDo
+cp toDo $toPut
+
+echo "Done. Please restart the terminal to use the program.\nThank you!"
