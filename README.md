@@ -1,4 +1,4 @@
-#ToDo-List
+# ToDo-List
 A basic command line todo list that can store tasks and repeat them back later.
 
 Run the installer to install the program. Make sure you enter actual paths or you might mess up the install. I recommend entering nothing for the launcher path and sticking with the default of "\usr\bin"
