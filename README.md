@@ -1,7 +1,12 @@
 # CLI-Based-Todo-List
 A basic command line todo list that can store tasks and repeat them back later.
 
+<<<<<<< HEAD
 Run the installer to install the program. Make sure you enter actual paths or you might mess up the install. I recommend entering nothing for the launcher path and sticking with the default of "\usr\bin"
+=======
+To use this program I first recommend placing the following files in a safe place in the same folder: Main.py, Item.py, save.task.
+After this you should note the path to the files mentioned above and insert the path within the file named toDo right before the pound symbol that reads "# Insert full path to files here". Finally place the file named toDo somewhere that your $PATH environment variable reaches to and type "chmod +x toDo". This way you can launch the program anywhere in the filesystem.
+>>>>>>> a954f3f4f27cc1a10eb13c6507d896cc54a5bcf0
 
 To uninstall simply delete the folder: toDo which lives in the path that you specified first. Then delete the launcher, if not in usr/bin then wherever you specified the second path.
 
