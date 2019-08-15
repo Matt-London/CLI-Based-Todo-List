@@ -8,6 +8,8 @@ then
   toPut = "/usr/bin"
 fi
 
+echo "An uninstaller seed will be placed in /usr/bin as a hidden file named .toDoUninstall\nThis will allow you to use the uninstaller.\nNote:\nIf you say no, you will not be able to use the uninstaller\nIs that Okay? (Enter 1 for yes, 0 for no)"
+read uninstall
 echo "Are these correct? (Enter 1 for yes, 0 for no):\nPath to files: $filePath\nPath to launcher: $toPut"
 read confirm
 if [ $confirm != 1 ]
@@ -27,6 +29,10 @@ cp Main.py $filePath/toDo
 cp LICENSE $filePath/toDo
 cp README.md $filePath/toDo
 cp save.task $filePath/toDo
+cp uninstaller $filePath/toDo
 cp toDo $toPut
-
-echo "Done. Please restart the terminal to use the program.\nThank you!"
+if [ $uninstall == 1 ]
+then
+echo "$filePath\n$toPut" > /usr/bin/.toDoUninstall
+fi
+echo "Done. Please restart the terminal to use the program. You may now delete the installer and its folder contents\nThank you!"
